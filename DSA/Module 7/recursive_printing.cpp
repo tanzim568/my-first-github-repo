@@ -1,0 +1,130 @@
+#include <bits/stdc++.h>
+using namespace std;
+class Node
+{
+public:
+    int val;
+    Node *next;
+
+    Node(int val)
+    {
+        this->val = val;
+        this->next = NULL;
+    }
+};
+void insert_at_position(Node *head, int pos, int val) // O(N)
+{
+    Node *newNode = new Node(val);
+    Node *tmp = head;
+
+    for (int i = 1; i <= pos - 1; i++) // jehetu N size hole size porjonto chole complexity hobe O(N)
+    {
+        tmp = tmp->next;
+    }
+    newNode->next = tmp->next;
+    tmp->next = newNode;
+}
+
+void insert_tail(Node *&head, Node *&tail, int val)
+{
+    Node *newNode = new Node(val);
+
+    Node *tmp = head;
+    if (head == NULL) // O(1)
+    {
+        head = newNode;
+        tail = newNode;
+    }
+
+    tail->next = newNode;
+    tail = newNode;
+
+    cout << endl;
+}
+void print_linked_list(Node *head)
+{
+    Node *tmp = head;
+    while (tmp != NULL)
+    {
+        cout << tmp->val << " "; // O(N)
+        tmp = tmp->next;
+    }
+    cout << endl;
+}
+int size(Node *head)
+{
+    Node *tmp = head;
+    int cnt = 0;
+    while (tmp != NULL) // O(N)
+    {
+        cnt++;
+        tmp = tmp->next;
+    }
+    return cnt;
+}
+void insert_head(Node *&head, int val) // O(1)
+{
+    Node *newNode = new Node(val);
+    newNode->next = head;
+    head = newNode;
+}
+
+void reverse_recursion(Node* n)  //recursion again & again value funtion e pass kora lage tai head dile main head er value change hobar possiblity thake 
+{
+   //base case
+   if(n==NULL) return;
+ 
+   reverse_recursion(n->next);
+     cout<<n->val<<" "; // recursive funtion er system onujai print call er pore dile reverse print hoi.. logic recursive module e dekhano hoyeche
+
+
+}
+
+int main()
+{
+    Node *head = new Node(10);
+    Node *a = new Node(20);
+    Node *b = new Node(30);
+    Node *c = new Node(40);
+    Node *d = new Node(50);
+    Node *tail = d;
+
+    head->next = a;
+    a->next = b;
+    b->next = c;
+    c->next = d;
+
+    print_linked_list(head);
+    cout<<endl;
+    reverse_recursion(head);
+
+    //singly list e reverse print e recursive diye reverse print kora hoi .. jehetu singly linked list left to right jay only right to left jay na tai recursive use kore print kora hoy ,,, doubly system different
+
+
+
+    // int val, pos;
+    // cout << "Enter value :";
+    // cin >> val;
+    // cout << "Enter Index/Position + 1 :";
+    // cin >> pos;
+
+    // if (pos > size(head))
+    // {
+    //     cout << "Invalid Index" << endl; // O(1)
+    // }
+    // else if (pos == 0)
+    // {
+    //     insert_head(head, val);
+    // }
+    // else if (pos == size(head))
+    // {
+    //     insert_tail(head, tail, val);
+    // }
+
+    // else
+    //     insert_at_position(head, pos, val); // O(N)
+
+    // print_linked_list(head);  
+
+    return 0;
+}

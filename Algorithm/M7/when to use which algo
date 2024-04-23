@@ -1,0 +1,19 @@
+jodi total weight of a graph negative hoi then oita negative weight cycle hisebe
+count hobe and dijkstra negative value handle korte pare jdi negative weight
+cycle na thake..
+
+jodi negative weight cycle thake then amra ekta different algorithm use kori
+bellmen ford algorithm.
+
+
+So , BFS er sob undirected ,directed graph er shortest path ver kore jekhane DFS just traverse kore
+BFS weighted graph e weight nite pare na tai Dijkstra algorithm use kore hoi..
+then update asche Dijkstra algorithm negative weight nie kaj korte parleo negative weight cycle hole infinite bar cholte thke (negative weight uporoe define kora hoeche)
+tai eita update hochhe Bellman ford algorithm.
+
+BFS --- > weighted graph
+Dijkstra > negative weight cycle
+Bellman ford > sob node ke source dhore shortest distance ver krte gele time complexity onk vere jay tai next updaate e etao fix kora jay 
+Floyd warshaw - 
+
+

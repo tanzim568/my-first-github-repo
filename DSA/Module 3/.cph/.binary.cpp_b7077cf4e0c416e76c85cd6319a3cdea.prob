@@ -1,0 +1,1 @@
+{"name":"Local: binary","url":"c:\\Phitron\\DSA\\Module 3\\binary.cpp","tests":[{"id":1703269451658,"input":"5\n1 2 3 4 5\n4","output":"YES"},{"id":1703300489480,"input":"6\n4 5 7 8 9 4\n2","output":"NO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Phitron\\DSA\\Module 3\\binary.cpp","group":"local","local":true}

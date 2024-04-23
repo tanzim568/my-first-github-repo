@@ -1,0 +1,5 @@
+Node 0 -- >  shortest distance 0
+Node 1 -- >  shortest distance 6
+Node 2 -- >  shortest distance 5
+Node 3 -- >  shortest distance 4
+Node 4 -- >  shortest distance 9

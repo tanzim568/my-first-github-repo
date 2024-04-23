@@ -1,0 +1,5 @@
+//  worst e case e sob gulo edge ekbar nile just 1 ta node path relax korte parbe.. source er sthe connected jekhon ekta node...
+// best case sob gulo ekbar nile  se ekbar sob node er path relax kore hoyto pare but best case to always hobe na amder worst case vabte hobe  
+/*N number of nodes hole N-1 bar sob gulo edge ke dhore path relax korte hobe mane sob gulo node ke 1 bar path relax korbo
+then abar korob sob gulo ke dhore then abar   evabe N-1 bar korbo N-1 bar karon src er shortest ora die dibe tai amader baki N-1 number of nodes er shortest distance ver korte hobe*/
+// Jehetu etay ekta fixed number er path relax er loop  cholbe tai negative weight asleo infinite loop e jabe na program

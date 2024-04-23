@@ -1,0 +1,31 @@
+// jokhon kono node er sthe onno node er connection ache ki na 
+// connection ache ki na /cost koto ? - adj mat[]
+// kar sthe kar connection ?- adj list
+// edge lagbe 
+
+
+Adjancency matrix :
+ amader jokhon kono node er sthe onno node er connection ache ki na ver kore hobe
+ tokhon adjancency matrix lagbe .. weight er khetre adj mat er per cell er amra oi node er weight rakte pari.. 
+
+ adjacency list:
+ eti ekti vector array.. means je .. int a[5] bolte amra buji je a namok ([]) array er 5 ti index 
+ per index er ekek ti int data type er value ache .. vector <int> a[5] bolte per index ekek ti vector and oi vector er data type hobe int data typedef
+ ar jodi weight rakhte jai then vector <pair<int,int>> a[5] er data type dibo int mane se vector er data type er moto behave korbe and er index e ekti kore pair rakhbe and sei pair er data type gulo hobe int
+
+
+ edge list :
+ amder jokhon edge lists nie kaj koret hobe tokhon edge list use korbo .. like bellman ford ., warshaw algo edder moto..
+ vector <pair<int,int>> v/// ar weighted graph e edge er sthe weight thkle pair or pair ba vector of vector diyeo weight ba cost neya jay but complex onek
+ tai alada class Edge baniye  vector <Edge > evabe push kore 3 ta data eksthe neya hoi
+
+
+ Matrix -> adj_list
+ Matrix -> edge 
+ 
+ adj_list ->matrix
+ adj_list ->edge
+  
+ edge -> matrix
+ edge ->adj_list
+ 

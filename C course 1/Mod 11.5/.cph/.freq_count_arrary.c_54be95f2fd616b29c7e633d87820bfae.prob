@@ -1,0 +1,1 @@
+{"name":"Local: freq_count_arrary","url":"c:\\Phitron\\Mod 11.5\\freq_count_arrary.c","tests":[{"id":1699814016611,"input":"aaabbc","output":"a : 3\nb : 2\nc : 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Phitron\\Mod 11.5\\freq_count_arrary.c","group":"local","local":true}
