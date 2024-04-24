@@ -47,10 +47,12 @@ int main ()
     d.push_back ({-1,0});
     d.push_back ({1,0});
       
+      int si, sj;
+        int di, dj;
+        
       while(cin>>n)
       {
-        int si, sj;
-        int di, dj;
+        
         for(int i=0;i<n;i++)
         { 
             for(int j=0;j<n;j++)
@@ -69,10 +71,6 @@ int main ()
             }
         }
 
-          memset(vis,false,sizeof(vis));
-      memset(dis,-1,sizeof(dis));
-      bfs(si,sj);
-      cout<<dis[di][dj];
     // for(int i=0;i<n;i++)
     // {
     //     for(int j=0;j<n;j++)
@@ -85,6 +83,11 @@ int main ()
        
          
       }
+      
+          memset(vis,false,sizeof(vis));
+      memset(dis,-1,sizeof(dis));
+      bfs(si,sj);
+      cout<<dis[di][dj];
 
     
 return 0;
