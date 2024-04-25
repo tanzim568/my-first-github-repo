@@ -4,6 +4,7 @@ const int N=1050;
 char a[N][N];
 bool vis[N][N];
 int dis[N][N];
+int x,y;
 // pair<int,int> parent[N][N];
 map<pair<int,int>,pair<int,int>> mp;
 int n,m,cmp;
@@ -34,7 +35,7 @@ void bfs(int si,int sj)
 
             if(valid(ci,cj) && !vis[ci][cj] && a[ci][cj] != '#')
             {
-                // cout<<ci<<" "<<cj<<endl;
+                cout<<ci<<" "<<cj<<" ischild off "<<par.first<<" "<<par.second<<endl;
                 q.push({ci,cj});
                 vis[ci][cj]=true;
                 // mp.insert({ci,cj},{par.first,par.second});
@@ -81,6 +82,12 @@ int main ()
 //    cout<<si<<sj;
    bfs(si,sj);
 
+
+//   while ()
+//   {
+    
+//   }
+  
   
 
 //    for(int i=0;i<n;i++)
@@ -108,17 +115,107 @@ int main ()
 
    
    
-for(auto it= mp.begin();it!=mp.end();it++)
-{
-    // cout<<it->first.first<<it->first.second<<" parent -> "<<it->second.first<<it->second.second<<endl;
-    if(a[it->first.first][it->first.second]=='R')
-  {
-    cout<<it->second.first<<it->second.second<<endl;
+// for(auto it= mp.begin();it!=mp.end();it++)
+// {
+//     // cout<<it->first.first<<it->first.second<<" parent -> "<<it->second.first<<it->second.second<<endl;
+//     if(a[it->first.first][it->first.second]=='R')
+//   {
+//     int x=it->first.first;
+//     int y=it->first.second;
+//     while(a[x][y]!='D')
+
+//     {
+//     cout<<it->second.first<<it->second.second<<endl;
+//     int x=it->second.first;
+//     int y=it->second.second;
+//     }
     
-  }       
+    pair<int,int> des={di,dj};
+    pair<int,int> src={si,sj};
+    // mp[src]={-1,-1};
+    // pair<int,int>x=mp[src];
+
+    // cout<<mp[src].first<<" "<<mp[src].second;
+    
+    
+    // cout<<src.first<<" "<<src.second;
+//   }       
 
 
+// }
+// bool cycle=false;
+
+// map<pair<int,int>,pair<int,int>>::iterator it = mp.end();
+// cout<<mp[des].first<<" "<<mp[des].second;
+while(mp[des]!= mp[src])
+{
+    // cout<<mp[des].first<<" "<<mp[des].second<< " -> source "<<mp[src].first<<mp[src].second<<endl;
+    // cout<<mp[des].first<<" "<<mp[des].second<<endl;
+    if(a[mp[des].first][mp[des].second]=='D') break;
+    else a[mp[des].first][mp[des].second]='X';
+    des=mp[des];
+    // cout<<mp[src].first<<
 }
+
+//      for(int i=0;i<n;i++)
+//    {
+//     for(int j=0;j<m;j++)
+//     {
+//         cout<<a[i][j];
+       
+//     }
+//     cout<<endl;
+//    }
+
+
+
+// while(it!=mp.begin())
+// while(a[it->first.first][it->first.second]!='D')
+// while(it!=mp.begin())
+// {
+//     if(a[it->first.first][it->first.second]=='D')
+//     {
+//         break;
+//     }
+//     if(a[it->first.first][it->first.second]=='R')
+//     {
+//         cycle=true;
+//         cout<<it->second.first<<it->second.second;
+//         // continue;
+//     }
+//     if(cycle)
+//     {
+//         cout<<it->second.first<<it->second.second;
+
+//     }
+//     it--;
+    
+//  }
+    // it--;
+    
+   
+
+
+// for(auto it= mp.begin();it!=mp.end();it++)
+// {
+//      if(a[it->first.first][it->first.second]=='R')
+//      {
+//         //  x=it->first.first;
+//         //  y=it->first.second;
+//         cout<<it->second.first<<it->second.second;
+//        cout <<a[it->second.first][it->second.second];
+        
+        
+//      }
+// }
+// cout<<x<<y;
+
+// while(a[x][y]!='D')
+// {
+//     cout<<mp[{x,y}];
+
+// }
+
    
 
    
