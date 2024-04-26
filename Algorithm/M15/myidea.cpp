@@ -35,7 +35,7 @@ void bfs(int si,int sj)
 
             if(valid(ci,cj) && !vis[ci][cj] && a[ci][cj] != '#')
             {
-                cout<<ci<<" "<<cj<<" ischild off "<<par.first<<" "<<par.second<<endl;
+                // cout<<ci<<" "<<cj<<" ischild off "<<par.first<<" "<<par.second<<endl;
                 q.push({ci,cj});
                 vis[ci][cj]=true;
                 // mp.insert({ci,cj},{par.first,par.second});
@@ -157,15 +157,15 @@ while(mp[des]!= mp[src])
     // cout<<mp[src].first<<
 }
 
-//      for(int i=0;i<n;i++)
-//    {
-//     for(int j=0;j<m;j++)
-//     {
-//         cout<<a[i][j];
+     for(int i=0;i<n;i++)
+   {
+    for(int j=0;j<m;j++)
+    {
+        cout<<a[i][j];
        
-//     }
-//     cout<<endl;
-//    }
+    }
+    cout<<endl;
+   }
 
 
 

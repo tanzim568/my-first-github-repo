@@ -4,16 +4,15 @@ const int N=1050;
 char a[N][N];
 bool vis[N][N];
 int dis[N][N];
-
-map<pair<int,int>,pair<int,int>> mp;
-int n,m;
+// pair<int,int> parent[N][N];
+map<pair<int,int>,pair<int,int>>;
+int n,m,cmp;
 vector<pair<int,int>> d={{0,1},{0,-1},{-1,0},{1,0}};
 
 bool valid(int i,int j)
 {
     return (i>=0 && i<n && j>=0 && j<m );
 }
-
 
 void bfs(int si,int sj)
 {
@@ -28,7 +27,6 @@ void bfs(int si,int sj)
         // cout<<par.first<<" "<<par.second<<endl;
         // cmp++;
 
-
         for(int i=0;i<4;i++)
         {
             int ci=par.first+d[i].first;
@@ -36,12 +34,11 @@ void bfs(int si,int sj)
 
             if(valid(ci,cj) && !vis[ci][cj] && a[ci][cj] != '#')
             {
-                // cout<<ci<<" "<<cj<<" ischild off "<<par.first<<" "<<par.second<<endl;
+                // cout<<ci<<" "<<cj<<endl;
                 q.push({ci,cj});
                 vis[ci][cj]=true;
-                // mp.insert({ci,cj},{par.first,par.second});
-                mp[{ci,cj}] = {par.first,par.second};
-            
+                parent[ci][cj] = {(par.first,par.second)};
+               
 
 
             }
@@ -62,57 +59,54 @@ int main ()
       for(int j=0;j<m;j++)
       {
         cin>>a[i][j];
-        if(a[i][j]=='R')
+        if(a[i][j]=='D')
         {
             si=i;
             sj=j;
         }
-        if(a[i][j]=='D')
+        if(a[i][j]=='R')
         {
             di=i;
             dj=j;
         }
-      
+        //output checked 
 
 
       }
    } 
 
-//    for(auto it=mp.begin();it!=mp.end();it++)
-//    {
-//     mp[{}]
-//    }
-  memset(vis,false,sizeof(vis));
    bfs(si,sj);
+
+   
+   
+
+   
+
+   
+
+
+//    memset(vis,false,sizeof(vis));
+//    int mn=INT_MAX;
+//    int cnt=0;
+//    for(int i=0;i<n;i++)
+//    {
+//       for(int j=0;j<m;j++)
+//       {
+          
+//           if(!vis[i][j] && a[i][j]!='-')
+//           {
+//             // cout<<i<<" "<<j<<endl; 
+//             cmp=1;
+//             cnt++;
+//             bfs(i,j);
+//             // cout<<cmp<<endl;
+//             mn=min(cmp,mn);
+//           }
+
+//       }
+//    }
  
-
-
     
-    pair<int,int> des={di,dj};
-    pair<int,int> src={si,sj};
-
-    
-
-while(mp[des]!= src)
-{
-    if(!vis[di][dj]) break;
-    if(a[mp[des].first][mp[des].second]=='D') break;
-    else a[mp[des].first][mp[des].second]='X';
-    des=mp[des];
- 
-}
-
-     for(int i=0;i<n;i++)
-   {
-    for(int j=0;j<m;j++)
-    {
-        cout<<a[i][j];
-       
-    }
-    cout<<endl;
-   }
-
-
 
 
 
