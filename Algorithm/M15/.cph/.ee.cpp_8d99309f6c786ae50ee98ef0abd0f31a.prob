@@ -1,0 +1,1 @@
+{"name":"Local: ee","url":"i:\\Phitron\\my-first-github-repo\\Algorithm\\M15\\ee.cpp","tests":[{"id":1714061046304,"input":"5 6\n...D.#\n.##..#\n....#.\n.R#...\n.#.##.","output":"...D.#\n.##X.#\n.XXX#.\n.R#...\n.#.##."}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"i:\\Phitron\\my-first-github-repo\\Algorithm\\M15\\ee.cpp","group":"local","local":true}
