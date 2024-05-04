@@ -32,44 +32,22 @@ int knapsack(int n,int weight[],int value[],int W)
 
 int main ()
 {
-    int n;
-    cin>>n;
+    int n,w;
+    cin>>n>>w;
     int weight[n];
     int value[n];
 
-
-    for(int i=0;i<n;i++)
-    {
-        cin>>weight[i];
-    }
-    for(int i=0;i<n;i++)
-    {
-        cin>>value[i];
-    }
-    int w;
-    cin>>w;
-    for(int i=0 ;i<=n;i++)
-    {
-        for(int j=0;j<=w;j++)
-        {
-
-            
-            if(i==0 || j==0)
-            dp[i][j]=7  ;
-            if(i==0 && j==0 )
-            dp[i][j]=1; 
-        }
-    }
-
-    for (int i=0;i<=n;i++)
-    {
-        for(int j=0;j<=w;j++)
-        {
-            cout<<dp[i][j];
-        }
-        cout<<endl;
-    }
     
-    // cout<<knapsack(n,weight,value,w);
+    for(int i=0;i<n;i++)
+    {
+        cin>>weight[i]>>value[i];
+    }
+    memset(dp,-1,sizeof(dp));
+ 
+
+    
+    
+    
+    cout<<knapsack(n,weight,value,w);
 return 0;
 }

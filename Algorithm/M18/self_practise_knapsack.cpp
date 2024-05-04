@@ -48,14 +48,16 @@ int main ()
     }
     int w;
     cin>>w;
-    for(int i=0 ;i<=n;i++)
+
+    //by default se zero die  o initialize korte pare abar garbaze value o generate korte pare...
+ for(int i=0 ;i<=n;i++)
     {
         for(int j=0;j<=w;j++)
         {
 
             
-            if(i==0 || j==0)
-            dp[i][j]=7  ;
+            // if(i==0 || j==0)
+            // dp[i][j]=5  ;
             if(i==0 && j==0 )
             dp[i][j]=1; 
         }
