@@ -37,7 +37,7 @@ int main ()
       
       for(int i=1;i<=s;i++)
       {
-        dp[0][i]=false;
+        dp[0][i]=0;
       }
 
       for(int i=1;i<=n;i++)
@@ -49,7 +49,7 @@ int main ()
                 // bool op1=dp[i-1][j-a[i-1]];
                 // bool op2=dp[i-1][j];
                 // dp[i][j]=op1 || op2;
-                dp[i][j]=dp[i-1][j-a[i-1]] || dp[i-1][j];
+                dp[i][j]=dp[i-1][j-a[i-1]] + dp[i-1][j];
 
             }
             else 
